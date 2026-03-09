@@ -168,7 +168,7 @@ const Chatbot = () => {
         <div className="fixed bottom-20 left-6 z-50 w-[340px] sm:w-[380px] max-h-[500px] flex flex-col rounded-xl border border-border bg-card shadow-2xl animate-scale-in overflow-hidden">
           {/* Header */}
           <div className="px-4 py-3 bg-primary text-primary-foreground font-display tracking-wide text-sm font-semibold flex items-center gap-2">
-            <MessageCircle size={16} />
+            <img src={chatbotIcon} alt="Bot" className="w-5 h-5 rounded-full object-cover" />
             Grand Line Bot
           </div>
 
