@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import { MessageCircle, X, Send } from "lucide-react";
+import { X, Send } from "lucide-react";
+import chatbotIcon from "@/assets/chatbot-icon.jpeg";
 
 interface Message {
   role: "user" | "bot";
@@ -156,10 +157,10 @@ const Chatbot = () => {
       {/* Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 left-6 z-50 p-3 rounded-full bg-primary text-primary-foreground shadow-lg hover:scale-110 transition-transform duration-300"
+        className="fixed bottom-6 left-6 z-50 w-12 h-12 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 overflow-hidden p-0 border-2 border-primary"
         aria-label="Chat"
       >
-        {isOpen ? <X size={22} /> : <MessageCircle size={22} />}
+        {isOpen ? <X size={22} className="mx-auto text-primary" /> : <img src={chatbotIcon} alt="Chat" className="w-full h-full object-cover" />}
       </button>
 
       {/* Chat Window */}
@@ -167,7 +168,7 @@ const Chatbot = () => {
         <div className="fixed bottom-20 left-6 z-50 w-[340px] sm:w-[380px] max-h-[500px] flex flex-col rounded-xl border border-border bg-card shadow-2xl animate-scale-in overflow-hidden">
           {/* Header */}
           <div className="px-4 py-3 bg-primary text-primary-foreground font-display tracking-wide text-sm font-semibold flex items-center gap-2">
-            <MessageCircle size={16} />
+            <img src={chatbotIcon} alt="Bot" className="w-5 h-5 rounded-full object-cover" />
             Grand Line Bot
           </div>
 
