@@ -6,6 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import EventsSection from "@/components/EventsSection";
 import ContactSection from "@/components/ContactSection";
 import DevelopersSection from "@/components/DevelopersSection";
+import Chatbot from "@/components/Chatbot";
 
 const Index = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
