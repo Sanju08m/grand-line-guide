@@ -11,8 +11,8 @@ const developers = [
     linkedin: "https://www.linkedin.com/in/sanju-m-2b176930b",
   },
   {
-    initials: "NK",
     name: "Nithish Kumar S",
+    initials: "NK",
     email: "nithishkumar080706@gmail.com",
     github: "https://github.com/Nithishkumar08072006",
     linkedin: "https://www.linkedin.com/in/nithish-kumar-19201430b",
