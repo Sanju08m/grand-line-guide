@@ -57,6 +57,7 @@ const Index = () => {
       <footer className="py-8 text-center text-muted-foreground text-sm font-body border-t border-border">
         © 2026 Grand Line Tech Fest. All rights reserved.
       </footer>
+      <Chatbot />
     </div>
   );
 };
