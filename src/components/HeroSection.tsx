@@ -1,13 +1,16 @@
 import { Anchor, Calendar, MapPin } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
+      {/* Background video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        src="/video/going_merry.mp4"
       />
       {/* Dark overlay */}
       <div className="absolute inset-0" style={{ background: "var(--dark-overlay)" }} />
