@@ -1,10 +1,11 @@
 import { Mail, Github, Linkedin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import sanjayImg from "@/assets/dev-sanjay.jpeg";
 
 const developers = [
   {
-    initials: "SK",
     name: "Sanjay Kumar G",
+    image: sanjayImg,
     email: "ksanjay14796@gmail.com",
     github: "https://github.com/Sanju08m",
     linkedin: "https://www.linkedin.com/in/sanju-m-2b176930b",
