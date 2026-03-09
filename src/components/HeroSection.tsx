@@ -24,7 +24,7 @@ const HeroSection = () => {
           <Anchor className="w-5 h-5 text-primary" />
         </div>
 
-        <p className="text-foreground/60 tracking-[0.2em] uppercase text-sm mb-2 font-body">
+        <p className="text-white tracking-[0.2em] uppercase text-sm mb-2 font-body font-bold">
           Asian College
         </p>
 
