@@ -1,15 +1,20 @@
-import { Mail } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const developers = [
   {
     initials: "SK",
     name: "Sanjay Kumar G",
     email: "ksanjay14796@gmail.com",
+    github: "https://github.com/Sanju08m",
+    linkedin: "https://www.linkedin.com/in/sanju-m-2b176930b",
   },
   {
     initials: "NK",
     name: "Nithish Kumar S",
     email: "nithishkumar080706@gmail.com",
+    github: "https://github.com/Nithishkumar08072006",
+    linkedin: "https://www.linkedin.com/in/nithish-kumar-19201430b",
   },
 ];
 
@@ -23,24 +28,41 @@ const DevelopersSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {developers.map((dev) => (
-            <div
-              key={dev.name}
-              className="flex items-center gap-4 p-5 rounded-lg border border-border bg-card hover:border-primary/40 transition-colors"
-            >
-              <div className="w-12 h-12 rounded-full bg-primary/20 text-primary flex items-center justify-center font-display font-bold text-sm shrink-0">
-                {dev.initials}
-              </div>
-              <div className="font-body">
-                <h4 className="text-foreground font-semibold">{dev.name}</h4>
-                <a
-                  href={`mailto:${dev.email}`}
-                  className="text-muted-foreground text-sm flex items-center gap-1 hover:text-primary transition-colors"
-                >
-                  <Mail className="w-3 h-3" />
-                  {dev.email}
-                </a>
-              </div>
-            </div>
+            <Card key={dev.name} className="hover:border-primary/40 transition-colors">
+              <CardContent className="flex flex-col items-center text-center gap-4 p-6">
+                <div className="w-16 h-16 rounded-full bg-primary/20 text-primary flex items-center justify-center font-display font-bold text-lg">
+                  {dev.initials}
+                </div>
+                <h4 className="text-foreground font-semibold text-lg font-body">{dev.name}</h4>
+                <div className="flex flex-col gap-2 font-body">
+                  <a
+                    href={`mailto:${dev.email}`}
+                    className="text-muted-foreground text-sm flex items-center gap-2 hover:text-primary transition-colors"
+                  >
+                    <Mail className="w-4 h-4" />
+                    {dev.email}
+                  </a>
+                  <a
+                    href={dev.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground text-sm flex items-center gap-2 hover:text-primary transition-colors"
+                  >
+                    <Github className="w-4 h-4" />
+                    GitHub
+                  </a>
+                  <a
+                    href={dev.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground text-sm flex items-center gap-2 hover:text-primary transition-colors"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                    LinkedIn
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
