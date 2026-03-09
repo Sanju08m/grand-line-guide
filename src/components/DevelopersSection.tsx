@@ -1,17 +1,18 @@
 import { Mail, Github, Linkedin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import sanjayImg from "@/assets/dev-sanjay.jpeg";
 
 const developers = [
   {
-    initials: "SK",
     name: "Sanjay Kumar G",
+    image: sanjayImg,
     email: "ksanjay14796@gmail.com",
     github: "https://github.com/Sanju08m",
     linkedin: "https://www.linkedin.com/in/sanju-m-2b176930b",
   },
   {
-    initials: "NK",
     name: "Nithish Kumar S",
+    initials: "NK",
     email: "nithishkumar080706@gmail.com",
     github: "https://github.com/Nithishkumar08072006",
     linkedin: "https://www.linkedin.com/in/nithish-kumar-19201430b",
@@ -30,9 +31,13 @@ const DevelopersSection = () => {
           {developers.map((dev) => (
             <Card key={dev.name} className="hover:border-primary/40 transition-colors">
               <CardContent className="flex flex-col items-center text-center gap-4 p-6">
-                <div className="w-16 h-16 rounded-full bg-primary/20 text-primary flex items-center justify-center font-display font-bold text-lg">
-                  {dev.initials}
-                </div>
+                {'image' in dev && dev.image ? (
+                  <img src={dev.image} alt={dev.name} className="w-16 h-16 rounded-full object-cover" />
+                ) : (
+                  <div className="w-16 h-16 rounded-full bg-primary/20 text-primary flex items-center justify-center font-display font-bold text-lg">
+                    {('initials' in dev && dev.initials) || dev.name.split(' ').map(w => w[0]).join('')}
+                  </div>
+                )}
                 <h4 className="text-foreground font-semibold text-lg font-body">{dev.name}</h4>
                 <div className="flex flex-col gap-2 font-body">
                   <a
