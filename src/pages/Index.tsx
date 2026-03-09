@@ -6,6 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import EventsSection from "@/components/EventsSection";
 import ContactSection from "@/components/ContactSection";
 import DevelopersSection from "@/components/DevelopersSection";
+import Chatbot from "@/components/Chatbot";
 
 const Index = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -56,6 +57,7 @@ const Index = () => {
       <footer className="py-8 text-center text-muted-foreground text-sm font-body border-t border-border">
         © 2026 Grand Line Tech Fest. All rights reserved.
       </footer>
+      <Chatbot />
     </div>
   );
 };
